@@ -1,7 +1,93 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<style>
+  .services-section {
+    padding: 60px 20px;
+    background-color: #f4f5f7;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .service-card {
+    background-color: #fff;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-card i {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .service-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .service-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+</style>
+<section class="services-section">
+  <div class="services-container">
 
+    <div class="service-card">
+      <i class="ri-code-line"></i>
+      <h3>Web Development</h3>
+      <p>As a 3rd year Computer Science student, I'm learning to build websites from scratch using HTML, CSS, and JavaScript. I'm still growing my skills but loving every line of code I write.</p>
+    </div>
 
+    <div class="service-card">
+      <i class="ri-layout-4-line"></i>
+      <h3>Responsive Design</h3>
+      <p>I'm exploring how to make websites look great on any device. Understanding flexible layouts and media queries is something I'm currently working on and improving daily.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="ri-brush-line"></i>
+      <h3>Creative Design</h3>
+      <p>I enjoy experimenting with colors, fonts, and layouts. While I’m still a beginner, I aim to make every project look clean and visually appealing with my own creative touch.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="ri-server-line"></i>
+      <h3>BackEnd</h3>
+      <p>I'm really interested in backend development using Python and Django — building the logic behind websites and learning how databases, APIs, and servers work.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="ri-lightbulb-flash-line"></i>
+      <h3>Web Idea</h3>
+      <p>My mind is always buzzing with ideas for websites and tools I want to create. I jot them down and slowly build them as I learn more about web technologies.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="ri-pencil-ruler-2-line"></i>
+      <h3>Graphic Design</h3>
+      <p>I'm still exploring graphic design basics, but I enjoy playing around with design tools to make logos and banners. It’s a skill I hope to improve alongside coding.</p>
+    </div>
+
+  </div>
+</section>
 
 {% endblock %}

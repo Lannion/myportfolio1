@@ -1,7 +1,112 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
-
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .hero {
+    height: 100vh;
+    background: url("{% static 'images/bgpic.png' %}") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #ddd;
+  }
+  
+  .hero h2 {
+    font-size: 1.5em;
+  }
+  
+  .hero h2 span {
+    font-weight: bold;
+    color: #fff;
+  }
+  :root {
+    --color-bg: rgba(255, 255, 255, 0.1);
+    --color-tertiary: #4a90e2;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --inner-shadow: inset 0 0 8px rgba(74, 144, 226, 0.6);
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social-icons i {
+    font-size: 1rem;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    color: white;
+    margin: 0 10px;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons i:hover {
+    color: var(--color-tertiary);
+    box-shadow: var(--inner-shadow);
+    transform: scale(1.1);
+  }
+  
+</style>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>HELLO I'M JOHN DAVID</h1>
+      <p>I’m a Computer Science student at Cavite State University - Bacoor City Campus, and coding is my ultimate playground! It feels like being a wizard in a digital realm, casting spells with every line of code to tackle complex challenges and create cool projects. I love diving into debugging and optimization, exploring algorithms like a true tech adventurer. Each project is a chance to learn something new, level up my skills, and unlock the mysteries of the digital world.</br>I’m a curious, creative, and driven person who loves learning new things and overcoming challenges. I value honesty, hard work, and kindness. When I’m not working or studying, I enjoy reading, spending time outdoors, and connecting with people.</br>I come from a loving and supportive family of seven. My parents have always encouraged me to pursue my dreams. I have four other siblings, and we share a strong bond. Family is my foundation, and they have shaped the values I carry today.</p>
+      <h2>I'm aspiring <span>WEB DEVELOPER</span></h2>
+      <div class="social-icons-container">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/johndavidcustodio/"><i class="ri-instagram-line"></i></a>
+          <a href="https://github.com/Lannion"><i class="ri-github-line"></i></a>
+          <a href="https://www.linkedin.com/in/john-custodio-412668196/"><i class="ri-linkedin-line"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 {% endblock %}

@@ -2,6 +2,178 @@
 {% load static %}
 {% block content %}
 
+<style>
+    .contact {
+      padding: 80px 20px;
+      background-color: #f9f9f9;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  
+    .contact .title h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 50px;
+      color: #222;
+    }
+  
+    .contact .title h2 span {
+      color:rgb(0, 0, 0);
+    }
+  
+    .contact-content .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  
+    .box {
+      background-color: white;
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      flex: 1 1 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+  
+    .box-icon i {
+      font-size: 2.2rem;
+      color:rgb(0, 0, 0);
+      background-color: #e6f0ff;
+      padding: 15px;
+      border-radius: 12px;
+    }
+  
+    .box-info h4 {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+      color: #333;
+    }
+  
+    .box-info span,
+    .box-info p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+    }
+  
+    .box-info a {
+      text-decoration: none;
+      color:rgb(0, 0, 0);
+      font-weight: bold;
+      word-break: break-all;
+    }
+  
+    .box-info a:hover {
+      text-decoration: underline;
+    }
+  
+    @media (max-width: 768px) {
+      .contact .title h2 {
+        font-size: 2.3rem;
+      }
+  
+      .box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+  
+      .box-icon i {
+        margin-bottom: 10px;
+      }
+    }
+    .social-icons-container {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .social-icons {
+        display: flex;
+        gap: 20px; /* space between icons */
+      }
+      
+      .social-icons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:rgb(2, 19, 37);
+        color: white;
+        font-size: 1.8rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 6px 15px rgba(0, 123, 255, 0.2);
+        text-decoration: none;
+      }
+      
+      .social-icons a:hover {
+        background-color:rgb(15, 29, 44);
+        transform: scale(1.1);
+      }      
 
+  </style>
+  
+
+<section class="contact" id="contact">
+    <div class="title">
+        <h2>Contact <span>Me</span></h2>
+    </div>
+    <div class="contact-content">
+        <div class="row">
+          <div class="box">
+              <div class="box-icon">
+                  <i class="ri-home-line"></i>
+              </div>
+              <div class="box-info">
+                  <h4>Address</h4>
+                  <span>Bacoor city, Cavite, Philippines</span>
+              </div>
+          </div>
+          <div class="box">
+              <div class="box-icon">
+                  <i class="ri-phone-line"></i>
+              </div>
+              <div class="box-info">
+                  <h4>Phone Number</h4>
+                  <span>(+63)999 373 4062</span>
+              </div>
+          </div>
+          <div class="box">
+              <div class="box-icon">
+                  <i class="ri-mail-line"></i>
+              </div>
+              <div class="box-info">
+                <h4>Email Address</h4>
+                <span>
+                    <a class="lead font-weight-bold" href="mailto:johndavid8921@gmail.com?subject=Inquiry&body=Hello John,">
+                        johndavid8921@gmail.com
+                    </a>
+                </span>
+            </div>
+          </div>
+        </div>
+        <div class="social-icons-container">
+            <div class="social-icons">
+              <a href="https://www.instagram.com/johndavidcustodio/"><i class="ri-instagram-line"></i></a>
+              <a href="https://github.com/Lannion"><i class="ri-github-line"></i></a>
+              <a href="https://www.linkedin.com/in/john-custodio-412668196/"><i class="ri-linkedin-line"></i></a>
+              <a href="https://www.facebook.com/johndavid.custodio.9"><i class="ri-facebook-line"></i></a>
+            </div>
+        </div>
+    </div>
+   </section>
 
 {% endblock %}

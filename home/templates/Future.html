@@ -2,6 +2,96 @@
 {% load static %}
 {% block content %}
 
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .plans-section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .plans-section h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #222;
+  }
+
+  .plan-card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+  }
+
+  .plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  }
+
+  .plan-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #444;
+  }
+
+  .plan-card p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  @media (max-width: 768px) {
+    .plans-section h1 {
+      font-size: 2.2rem;
+    }
+
+    .plan-card h2 {
+      font-size: 1.4rem;
+    }
+  }
+</style>
+
+<section class="plans-section">
+  <h1>🌟 Future Plans in Life</h1>
+
+  <div class="plan-card">
+    <h2>🎓 Finish My Degree</h2>
+    <p>My top priority is to successfully complete my Bachelor's Degree in Computer Science. I want to graduate with solid foundational skills in programming, software development, and computer systems.</p>
+  </div>
+
+  <div class="plan-card">
+    <h2>💻 Master Backend Development</h2>
+    <p>I'm very interested in backend development using Python and Django. I want to build scalable, secure, and efficient web applications, and eventually become confident working with APIs, databases, and server-side logic.</p>
+  </div>
+
+  <div class="plan-card">
+    <h2>🚀 Start a Career in Tech</h2>
+    <p>After graduating, I plan to land a job in the tech industry, ideally in a backend or full-stack role. I want to work with a team of developers, contribute to meaningful projects, and keep growing professionally.</p>
+  </div>
+
+  <div class="plan-card">
+    <h2>📚 Never Stop Learning</h2>
+    <p>Technology never stands still, so I plan to keep learning through online courses, certifications, and building personal projects. I'm open to exploring areas like cloud computing, DevOps, or cybersecurity in the future.</p>
+  </div>
+
+  <div class="plan-card">
+    <h2>🌍 Give Back and Inspire</h2>
+    <p>One day, I’d love to give back to the community — maybe by mentoring beginners, creating open-source projects, or even teaching what I’ve learned. Helping others get into tech is one of my long-term goals.</p>
+  </div>
+</section>
 
 {% endblock %}

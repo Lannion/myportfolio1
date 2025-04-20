@@ -2,6 +2,118 @@
 {% load static %}
 {% block content %}
 
+<style>
+  .bw-section {
+    padding: 80px 20px;
+    background-color: #fff;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+  }
 
+  .bw-title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .bw-title h2 {
+    font-size: 2.8rem;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+
+  .bw-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .bw-image {
+    flex: 1 1 300px;
+    max-width: 400px;
+  }
+
+  .bw-image img {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(100%);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .bw-text {
+    flex: 2 1 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .bw-box {
+    border: 1px solid #000;
+    padding: 25px;
+    border-radius: 12px;
+  }
+
+  .bw-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    border-left: 4px solid #000;
+    padding-left: 10px;
+  }
+
+  .bw-box p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #111;
+  }
+
+  @media (max-width: 768px) {
+    .bw-flex {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bw-image,
+    .bw-text {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<section class="bw-section">
+  <div class="bw-title">
+    <h2>Challenges & Learnings</h2>
+  </div>
+
+  <div class="bw-flex">
+    <div class="bw-image">
+      <img src="{% static 'images/bgpic2.png' %}" alt="John David">
+    </div>
+
+    <div class="bw-text">
+      <div class="bw-box">
+        <h3>Challenges I’ve Faced</h3>
+        <p>
+          Being a 3rd year Computer Science student has been tough especially when financial struggles become part of the journey. 
+          There are times I worry about school expenses, balancing personal responsibilities, and finding the resources I need to keep learning.
+          But even with these difficulties, I’ve stayed committed to my dream of becoming a back-end developer. 
+          Every hurdle just fuels my drive to push forward.
+        </p>
+      </div>
+
+      <div class="bw-box">
+        <h3>Acquired Life Learnings</h3>
+        <p>
+          These challenges taught me discipline, gratitude, and mental strength. I’ve learned that no matter how limited your tools may seem,
+          growth always comes from effort. Each bug I fix, each late night I spend studying, they all build me into someone capable and persistent. 
+          It’s not just about learning code, it’s about learning life and I’m proud of how far I’ve come.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
